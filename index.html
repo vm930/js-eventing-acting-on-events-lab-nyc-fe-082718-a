@@ -17,6 +17,35 @@
       </div>
       <script>
         // your code here
+        // var dodger = document.getElementById("dodger")
+        // dodger.style.backgroundColor = " ";
+        // dodger.style.bottom = "100px";
+        // document.addEventListener("keydown", function(e){
+        //   console.log(e.which)
+        // });
+        const dodger = document.getElementById ("dodger")
+        dodger.style.backgroundColor = "pink";
+        
+        document.addEventListener ("keydown", function(e){
+          if(e.which === 39) {
+            moveDodgerLeft();
+          } else if (e.which === 37){
+            moveDodgerRight();
+          }
+        })
+        
+        function moveDodgerLeft(){
+          let leftNumbers = 
+          dodger.style.left.replace("px","")
+          let right = parseInt(leftNumbers, 10)
+          
+          if (left > 0) {
+            dodger.style.left = `${left - 1}px`
+          }else if (left < = 360){
+            dodger.style.left = `${left + 1}px`
+          }
+        }
+        
       </script>
       <!-- <div> for Mocha to display test results. -->
       <div id="mocha"></div>
